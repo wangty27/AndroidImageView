@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:textSize="25sp"
+                android:text="@string/app_name"/>
+
+            <ImageButton
+                android:id="@+id/refreshListBtn"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@android:drawable/stat_notify_sync"/>
+
+            <ImageButton
+                android:id="@+id/clearListBtn"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@android:drawable/ic_menu_delete"/>
+
+            <RatingBar
+                android:id="@+id/filterRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"/>
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/imageListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            app:fastScrollEnabled="true"
+            app:fastScrollHorizontalThumbDrawable="@drawable/scrollbar_thumb"
+            app:fastScrollHorizontalTrackDrawable="@drawable/scrollbar_line"
+            app:fastScrollVerticalThumbDrawable="@drawable/scrollbar_thumb"
+            app:fastScrollVerticalTrackDrawable="@drawable/scrollbar_line"
+            android:visibility="gone"
+            android:paddingRight="15dp"/>
+
+        <FrameLayout
+            android:id="@+id/loadingSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            >
+            <ProgressBar
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageFocusView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:background="@color/cardview_dark_background"
+        />
+</FrameLayout>
