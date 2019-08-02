@@ -7,11 +7,9 @@ $ gradle build
 
 ### Refresh Button (Button with refresh icon)
 * The refresh button will reload the images from the source url, clear all the ratings
-* **Note: refresh button will not reset the rating filter**
 
 ### Clear Button (Button with trash can icon)
 * The clear button will clear all the images
-* **Note: clear button will not reset the rating filter**
 
 ### Rating Filter (Top right corner)
 * Select a rating to filter the images
